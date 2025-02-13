@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* { /* significa todas as tags */
+
+    margin: 0px;
+    padding: 0px;
+
+    font-family: "Jost";
+
+}
+
+.app-header {
+
+    /* Estilizacao aqui dentro */
+    height: 80px;
+
+    display: flex; /* Muda a orientação para lado-a-lado */
+    align-items: center; /* Deixa o texto centralizado verticalmente */
+    justify-content: space-between; /* Joga os elementos para os cantos */
+
+    padding-left: 80px;
+    padding-right: 80px;
+
+    box-shadow: 0px 2px 4px #464646;
+
+}
+
+.links a {
+
+    font-size: 30px;
+    text-decoration: none; /* Tira o traço de baixo da fonte */
+    color: #464646;
+    
+    padding-left: 35px;
+
+}
+.app-main{
+    padding: 80px;
+}
+
+.memory-card{
+    margin-right: 40px;
+    margin-bottom: 40px;
+    transition: all ease 0.3s;
+
+}
+.memory-card:hover{
+    cursor: pointer;    
+    scale: 1.05;
+}
+.memory-card .image1{
+    height: 300px;
+    width: 300px;
+
+    background-image: url("../Assets/Image/bg1.png");
+    background-size: cover;
+}
+
+.memory-card .image2{
+    height: 300px;
+    width: 300px;
+
+    background-image: url("../Assets/Image/Rectangle\ 7.png");
+    background-size: cover;
+}
+.memory-card .image3{
+    height: 300px;
+    width: 300px;
+
+    background-image: url("../Assets/Image/unsplash_2CZN9i4e5fI.png");
+    background-size: cover;
+}
+
+.memory-card .image4{
+    height: 300px;
+    width: 300px;
+
+    background-image: url("../Assets/Image/unsplash_2CZN9i4e5fI\ \(3\).png");
+    background-size: cover;
+}
+
+.memory-card .image5{
+    height: 300px;
+    width: 300px;
+
+    background-image: url("../Assets/Image/diecast.png");
+    background-size: cover;  
+    /*background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;*/
+}
+.memory-card h2{
+    font-size: 50px;
+    font-weight: normal; /* remove o negrito */
+   
+}
+
+.memoru .memory-card p {
+    color: #464646
+}
+
+.memories-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.app-footer{
+       /* Estilizacao aqui dentro */
+       height: 80px;
+
+       display: flex; /* Muda a orientação para lado-a-lado */
+       align-items: center; /* Deixa o texto centralizado verticalmente */
+       justify-content:center; /* Deixa o texto centralizado horizontalmente */
+   
+       padding-left: 80px;
+       padding-right: 80px;
+   
+       box-shadow: 0px -2px 4px #464646;
+}
