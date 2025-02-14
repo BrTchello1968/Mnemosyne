@@ -54,3 +54,16 @@ console.log(N2);
 
 console.log(parseInt(N1));
 console.log(parseFloat(N1));
+
+
+
+const idade2 = 20;
+if (idade2 < 18) {
+    console.log("Manor de idade");
+}
+else if(idade2 > 18){
+    console.log("Maior de idade");
+}
+else if(idade2 === 18){
+    console.log("Acabou de atingir a maioridade!")
+}
