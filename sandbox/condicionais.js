@@ -47,7 +47,7 @@
 //Exercicio Intermediario 1
 //  let num1 = prompt("Digite 1º Numero:");
 //  let num2 = prompt("Digite 2º Numero:");
-//  let op = prompt("Operacao:");
+//  let op = prompt("Operacao (+, -, *, /):");
 
  
 //  switch (op) {
@@ -55,7 +55,13 @@
 //         console.log(num1*num2)
 //       break;
 //     case "/":
-//         console.log(num1/num2)
+//         if (num1 == 0 || num2 == 0){
+//              console.log("Os numeros informados não podem ser divididos por 0")
+//          }
+//          else {   
+//              console.log(num1/num2)
+//          }
+//         
 //       break;
 //     case "-":
 //         console.log(num1-num2)
@@ -64,7 +70,7 @@
 //         console.log(num1+num2)
 //         break;
 //     default:
-//     console.log("Operador incorreto")
+//          console.log("Operador incorreto")
     
 //     }
 
@@ -86,7 +92,7 @@
 //     numMaior = num3;
 //  }
 
-//  console.log(`Maior NUmero: ${numMaior}` )
+//  console.log(`Maior Número: ${numMaior}` )
 
  
 
@@ -104,13 +110,13 @@
     
 
 //Exercicio Intermediario 5
-let usuario = prompt("Informe o usuario:");
-let senha = prompt("Informe a senha:");
+// let usuario = prompt("Informe o usuario:");
+// let senha = prompt("Informe a senha:");
 
-if (usuario == "admin" &&  senha == "1234"){
-    console.log("Login aceito !")
-}
-else
-{
-    console.log("Usuário/Senha incorreto!") 
-}
+// if (usuario == "admin" &&  senha == "1234"){
+//     console.log("Login aceito !")
+// }
+// else
+// {
+//     console.log("Usuário/Senha incorreto!") 
+// }
