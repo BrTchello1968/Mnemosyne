@@ -1,19 +1,25 @@
+import {useEffect} from "react";
+import Header from "../../components/header";
 import "./home.css";
-import logo from "../../assets/icons/mnemosyne-logo.svg";
+import memory from "../../services/memory"
 
 const Home = () => {
+
+    useEffect(()=> {
+
+        getMemoriesList();
+
+    },[]);
+
+    const getMemoriesList = async  () => {
+        const lista = await memory.getMemories();
+        console.log ("Lista: ", lista);
+ 
+    }
     return (
         <>
-            <header className="app-header">
-
-                <img src={logo} alt="Mnemosyne Logo"></img>
-
-                <div className="links">
-                    <a href="#">HOME</a>
-                    <a href="#">ADICIONAR MEMÓRIA</a>
-                </div>
-
-            </header>
+            
+            <Header></Header>
 
             <main className="app-main">
 
