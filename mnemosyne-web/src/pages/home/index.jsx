@@ -1,10 +1,11 @@
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import Header from "../../components/header";
 import "./home.css";
 import memory from "../../services/memory"
 
 const Home = () => {
 
+    const [memories, setMemories] = useState([]);
     useEffect(()=> {
 
         getMemoriesList();
@@ -14,7 +15,7 @@ const Home = () => {
     const getMemoriesList = async  () => {
         const lista = await memory.getMemories();
         console.log ("Lista: ", lista);
- 
+        setMemories(lista);
     }
     return (
         <>
@@ -26,67 +27,15 @@ const Home = () => {
                 <h1>Meus momentos</h1>
 
                 <div className="memories-container">
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
-                    <div className="memory-card">
-
-                        <div className="image"></div>
-
-                        <h2>Meu afilhado!</h2>
-
-                        <p>Neste dia recebi a notiícia de ser padrinho...</p>
-
-                    </div>
-
+                    {memories.map((memory , index) => (
+                    <a key={index} href={`/memory?id=${memory.id}`}>
+                        <div className="memory-card">
+                            <div className="image" style={{backgroundImage: `url(${memory.images[0]})`}}> </div>
+                            <h2>{memory.title}</h2>
+                            <p>{memory.description.substring(0,45)+ "..."}</p>
+                        </div>                
+                    </a>             
+                    ))};
                 </div>
 
             </main>
