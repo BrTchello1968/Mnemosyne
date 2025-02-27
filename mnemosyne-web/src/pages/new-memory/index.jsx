@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import Header from "../../components/header";
+import memory from "../../services/memory";
+import "./new-memory.css";
 
 const NewMemory = () =>{
 const [title, setTitle] = useState("");
@@ -25,7 +27,7 @@ const onSetImage = (event) => {
 const onCreateMemory = async () => {
     let payload = {
         title: title, // Título da memória
-        description: descriptio, // Descrição da memória
+        description: description, // Descrição da memória
         images: images, // Lista de imagens
         date: new Date().toISOString() // Data da criação no formato ISO
     };
